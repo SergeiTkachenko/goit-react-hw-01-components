@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { StatisticsList, UploadStats, UploadItem } from './Statistics.styled';
-import { getRandomColorExceptBlack } from './Statistics.styled';
+import { getRandomColorExceptBlack } from '../../utils/getRandomColorExceptBlack';
 
 export const Statistics = ({ title, statistics }) => {
   return (
     <StatisticsList>
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
 
       <UploadStats>
         {statistics.map(statistic => {
